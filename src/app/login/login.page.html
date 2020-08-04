@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Secure login
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div class="container" [formGroup]="login">
+        <div class="login-wrap">
+            <div class="logo">
+                <img src="../../assets/images/logo.png">
+            </div>
+            <mat-form-field appearance="standard">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Enter your username">
+                <mat-icon matSuffix>person_outline</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="standard">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Enter a secure password">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="buttons-wrap">
+    <button class="login-btn" mat-raised-button color="primary" routerLink="/tabs">Login</button>
+    <button class="forgot-btn" mat-button color="basic">Forgot password?</button>
+</ion-footer>

@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            <ion-row class="ion-justify-content-between">
+                <div>Promos</div>
+                <mat-button routerLink="/auth">
+                    <mat-icon>fingerprint</mat-icon>
+                </mat-button>
+            </ion-row>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Promos</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <div class="promos-list">
+        <div *ngFor="let promo of promos" class="promos-item">
+            <div class="promos-item-title">
+                <div class="left">
+                    <span class="name">
+                        {{promo.title}}
+                    </span>
+                    <span class="views">
+                        {{promo.views}} views
+                    </span>
+                    <span class="enrolled">
+                        {{promo.enrolled}} enrolled
+                    </span>
+                </div>
+                <div class="right">
+                    <mat-icon *ngIf="promo.hot">local_fire_department</mat-icon>
+                    <mat-icon *ngIf="!promo.hot">star_outline</mat-icon>
+                </div>
+            </div>
+
+            <div class="promos-item-desc">
+                {{promo.desc}}
+            </div>
+
+            <div class="promos-item-progress">
+                <mat-progress-bar mode="determinate" [value]="(promo.daysCount/promo.daysLength*100)"></mat-progress-bar>
+                <span class="count">
+                    {{promo.daysCount}} / {{promo.daysLength}} days
+                </span>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

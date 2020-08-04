@@ -1,0 +1,8 @@
+{
+  "name": "promos-list",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

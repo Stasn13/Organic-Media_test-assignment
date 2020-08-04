@@ -1,0 +1,47 @@
+ion-toolbar {
+  --background: #ab003c;
+  color: #f2f2f2;
+}
+
+::ng-deep {
+  .promos-list {
+    .promos-item {
+      padding: 15px 10px;
+      border-bottom: 1px solid #f2f2f2;
+
+      &-title {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+          font-size: 20px;
+          margin-right: 7px;
+        }
+
+        .views, .enrolled {
+          border: 1px solid #ab003c;
+          border-radius: 30px;
+          color: #ab003c;
+          padding: 2px 5px;
+          margin-right: 5px;
+        }
+
+        .mat-icon{
+          color: #ab003c
+        }
+      }
+
+      &-desc {
+
+      }
+
+      &-progress {
+        .mat-progress-bar-fill {
+          &:after {
+            background: #ab003c;
+          }
+        }
+      }
+    }
+  }
+}
