@@ -1,6 +1,10 @@
 ion-toolbar {
   --background: #ab003c;
   color: #f2f2f2;
+
+  .title {
+    align-self: center;
+  }
 }
 
 ::ng-deep {
@@ -26,7 +30,7 @@ ion-toolbar {
           margin-right: 5px;
         }
 
-        .mat-icon{
+        .mat-icon {
           color: #ab003c
         }
       }

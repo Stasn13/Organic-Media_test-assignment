@@ -4,7 +4,7 @@ ion-toolbar {
 }
 
 ion-content {
-  --background: #d8d7d799;
+  --background: #fff;
 
   .container {
     margin: 20px auto 0;
@@ -15,20 +15,29 @@ ion-content {
       flex-direction: column;
       max-width: 60%;
       margin: 0 auto;
+
+      .logo {
+        border-radius: 50%;
+
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+      }
     }
   }
 }
 
 .buttons-wrap {
   width: 100%;
-  padding: 5px;
+  padding: 5px 0;
 
   .login-btn {
     width: 100%;
     background-color: #ab003c;
     font-size: 24px;
     text-transform: uppercase;
-    padding: 12px;
+    padding: 12px 0;
     font-weight: bold;
   }
 
